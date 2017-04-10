@@ -1,0 +1,100 @@
+/*reg.jsp页面布局*/
+#reg_formwrapper
+{
+	width:560px;
+}
+
+fieldset
+{
+	padding:10px;
+	margin-top:5px;
+	border:1px solid #000000;
+	background:#fff;
+}
+
+legend span
+{
+width:80%;
+font-size:20px;
+font-family:隶书;
+}
+
+#email_tip{
+	position:relative;
+	left:130px;
+}
+
+#legend_geren
+{
+	width:auto;
+	color:#2380D5;
+	font-weight:bold;
+	font-size:18px;
+	padding:3px 20px 3px 20px;
+	border:1px solid #000000;
+	background:white;
+	font-family:楷体;
+}
+
+
+#legend_copyright span
+{
+	width:80%;
+	font-family:隶书;
+	font-weight:bold;
+	font-size:14px;
+}
+
+/*弹出框样式*/
+#massage_box
+{
+    position:absolute;
+    left:expression((body.clientWidth-350)/2);
+    top:expression((body.clientHeight-450)/2);
+    width:350px;
+    height:400px;
+    filter:dropshadow(color=#666666,offx=3,offy=3,positive=2);
+    z-index:2;
+    visibility:hidden;
+}
+#mask
+{
+    position:absolute;
+    top:0;
+    left:0;
+    width:expression(body.scrollWidth);
+    height:expression(body.scrollHeight);
+    background:#666;
+    filter:ALPHA(opacity=60);
+    z-index:1;
+    visibility:hidden;
+}
+.massage
+{
+    border:#036 solid;
+    border-width:1 1 3 1;/*上－右－下－左*/
+    width:95%;
+    height:95%;
+    background:#fff;
+    color:#036;
+    font-size:12px;
+    line-height:150%;
+    text-indent:24px;
+}
+.massageHeader
+{
+    background:#036;
+    height:20px;
+    fond-family:Verdana,Arial,Helvetica,sans-serif;
+    font-size:12px;
+    padding:3 5 0 5;
+    color:#fff;
+    text-indent:2px;
+}
+.massageContent
+{
+    height:380px;
+    overflow:auto;
+}
+
+

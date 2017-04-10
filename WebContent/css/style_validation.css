@@ -1,0 +1,122 @@
+/*页面布局*/
+body
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight: bold;
+	color:#666666;
+	background:#fff;
+	/*text-align:center;*/
+}
+*
+{
+	margin:0;
+	padding:0;
+}
+a
+{
+	color:#1E7ACE;
+	text-decoration:none;
+}
+
+a:hover
+{
+	color:#000;
+	text-decoration:underline;
+}
+ol
+{
+	margin-left:30px;
+}
+h3
+{
+	font-size:16px;
+	font-weight:bold;
+	color:#2380D5;
+	font-family:"隶书";
+}
+pre,p
+{
+	color:#0A1F31;
+	margin:4px;
+	font-size:17px;
+	font-family:楷体;
+}
+input,select,textarea
+{
+	padding:1px;
+	margin:2px;
+	font-size:14px;
+}
+.formwrapper
+{
+	width:450px;
+	margin:15px auto;
+	padding:20px;
+	text-align:left;
+	border:1px solid #A4CDF2;
+}
+
+fieldset
+{
+	padding:10px;
+	margin-top:5px;
+	border:1px solid #000000;
+	background:#fff;
+}
+fieldset legend
+{
+	color:#2380D5;
+	font-weight:bold;
+	font-size:18px;
+	padding:3px 20px 3px 20px;
+	border:1px solid #000000;
+	background:white;
+	font-family:楷体;
+
+}
+
+
+legend .legend_content
+{
+	width:100%;
+	font-size:18px;
+	font-family:隶书;
+}
+
+
+
+fieldset label
+{
+	float:left;
+	width:180px;
+	text-align:right;
+	padding:4px;
+	margin:1px;
+}
+fieldset div
+{
+	clear:left;
+	margin-bottom:2px;
+}
+
+/*按钮样式*/
+.button
+{
+	padding:1px 10px;
+	font-size:14px;
+	border:1px #1E7ACE solid;
+	background:#CCDDFF;
+}
+/*提交按钮特效*/
+.enter
+{text-align:center;}
+
+.clear
+{clear:both;}
+
+
+/*<p>标签就整个网页来说是蓝色的*/
+.massageContent p
+{color:#666;}
+

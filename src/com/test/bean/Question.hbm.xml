@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-26 11:25:21 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.test.bean.Question" table="QUESTION">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="paperExam" class="com.test.bean.PaperExam" column="subject" lazy="false">
+        
+        </many-to-one>
+        <property name="title" type="java.lang.String">
+            <column name="TITLE" />
+        </property>
+        <list name="options" inverse="false" table="OPTION_TABLE" lazy="false">
+            <key>
+                <column name="ID" />
+            </key>
+            <list-index></list-index>
+            <element type="java.lang.String">
+                <column name="OPTIONS" />
+            </element>
+        </list>
+        <list name="answers" inverse="false" table="ANSWER_TABLE" lazy="false">
+            <key>
+                <column name="ID" />
+            </key>
+            <list-index></list-index>
+            <element type="java.lang.Integer">
+                <column name="ANSWERS" />
+            </element>
+        </list>
+        <property name="point" type="int">
+            <column name="POINT" />
+        </property>
+        <property name="type" type="int">
+            <column name="TYPE" />
+        </property>
+    </class>
+</hibernate-mapping>

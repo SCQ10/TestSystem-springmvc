@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="userDao" class="com.test.dao.UserDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="questionDao" class="com.test.dao.QuestionDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="adminDao" class="com.test.dao.AdminDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="paperExamDao" class="com.test.dao.PaperExamDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="historyExamDao" class="com.test.dao.HistoryExamDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="userService" class="com.test.service.UserService">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	<bean id="questionService" class="com.test.service.QuestionService">
+		<property name="questionDao" ref="questionDao"></property>
+	</bean>
+	<bean id="adminService" class="com.test.service.AdminService">
+		<property name="adminDao" ref="adminDao"></property>
+	</bean>
+	<bean id="paperExamService" class="com.test.service.PaperExamService">
+		<property name="paperExamDao" ref="paperExamDao"></property>
+	</bean>
+	<bean id="historyExamService" class="com.test.service.HistoryExamService">
+		<property name="historyExamDao" ref="historyExamDao"></property>
+	</bean>
+	<bean id="userAction" class="com.test.action.UserAction" scope="prototype"></bean>
+	<bean id="questionAction" class="com.test.action.QuestionAction" scope="prototype"></bean>
+	<bean id="adminAction" class="com.test.action.AdminAction" scope="prototype"></bean>
+	<bean id="paperExamAction" class="com.test.action.PaperExamAction" scope="prototype"></bean>
+	<bean id="historyExamAction" class="com.test.action.HistoryExamAction" scope="prototype"></bean>
+</beans>
